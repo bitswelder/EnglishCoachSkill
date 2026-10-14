@@ -1,0 +1,27 @@
+{
+  "name": "claude-english-coach",
+  "version": "1.0.0",
+  "description": "A Claude Code skill that corrects non-native English and teaches the rule behind each fix",
+  "bin": {
+    "claude-english-coach": "install.js"
+  },
+  "files": [
+    "install.js",
+    "SKILL.md",
+    "references/",
+    "README.md"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skill",
+    "english",
+    "grammar",
+    "esl",
+    "language-learning"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.7.0"
+  }
+}

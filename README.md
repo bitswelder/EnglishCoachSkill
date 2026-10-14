@@ -5,19 +5,42 @@ Built for non-native speakers who want to improve, not just get a clean sentence
 
 ## Install
 
-Clone into your Claude skills folder:
+```bash
+npx github:<your-username>/english-coach
+```
+
+That copies the skill into `~/.claude/skills/english-coach`. Restart Claude Code and
+`/english-coach` is available.
+
+Add `--auto` to also install the every-message correction rule into your global
+`~/.claude/CLAUDE.md`:
+
+```bash
+npx github:<your-username>/english-coach --auto
+```
+
+Options:
+
+| Flag | Effect |
+|---|---|
+| `--auto` | also add the every-message correction rule to `~/.claude/CLAUDE.md` |
+| `--dir <path>` | install to a different skills directory |
+| `--force` | overwrite without the "already exists" warning |
+| `--help` | usage |
+
+Re-running the installer updates the skill files and never touches your
+`mistakes-log.md`. Requires Node 16.7 or newer; it has no dependencies.
+
+### Install by cloning instead
+
+If you would rather have a git checkout you can edit and push from:
 
 ```bash
 git clone https://github.com/<your-username>/english-coach.git ~/.claude/skills/english-coach
 ```
 
-On Windows:
-
-```bash
-git clone https://github.com/<your-username>/english-coach.git "$HOME/.claude/skills/english-coach"
-```
-
-Restart Claude Code. `/english-coach` is now available.
+On Windows `cmd.exe`, use `"%USERPROFILE%\.claude\skills\english-coach"` as the target —
+`$HOME` is not expanded there.
 
 ## Usage
 
@@ -45,7 +68,8 @@ Ask **"what are my common mistakes?"** for a summary of your recurring patterns.
 ## Automatic corrections on every message
 
 The skill only runs when you invoke it. To have your English checked on *every* message
-you send, add this to your global `~/.claude/CLAUDE.md`:
+you send, either install with `--auto` (above) or add this to your global
+`~/.claude/CLAUDE.md` by hand:
 
 ```markdown
 ## English corrections
@@ -94,6 +118,7 @@ mistake tracking are language-independent.
 
 ```
 SKILL.md                            the skill itself: rules, output format, modes
+install.js                          the npx installer, no dependencies
 references/pt-speaker-pitfalls.md   13 Portuguese→English traps with causes
 mistakes-log.md                     your personal error log (gitignored)
 ```
