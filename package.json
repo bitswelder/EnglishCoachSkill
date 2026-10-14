@@ -20,6 +20,11 @@
     "esl",
     "language-learning"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitswelder/EnglishCoachSkill.git"
+  },
+  "homepage": "https://github.com/bitswelder/EnglishCoachSkill#readme",
   "license": "MIT",
   "engines": {
     "node": ">=16.7.0"

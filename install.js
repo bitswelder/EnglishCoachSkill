@@ -19,7 +19,7 @@ if (has('-h', '--help')) {
   claude-english-coach — install the english-coach skill for Claude Code
 
   Usage:
-    npx github:<user>/english-coach [options]
+    npx github:bitswelder/EnglishCoachSkill [options]
 
   Options:
     --auto          also add the every-message correction rule to ~/.claude/CLAUDE.md

@@ -6,7 +6,7 @@ Built for non-native speakers who want to improve, not just get a clean sentence
 ## Install
 
 ```bash
-npx github:<your-username>/english-coach
+npx github:bitswelder/EnglishCoachSkill
 ```
 
 That copies the skill into `~/.claude/skills/english-coach`. Restart Claude Code and
@@ -16,7 +16,7 @@ Add `--auto` to also install the every-message correction rule into your global
 `~/.claude/CLAUDE.md`:
 
 ```bash
-npx github:<your-username>/english-coach --auto
+npx github:bitswelder/EnglishCoachSkill --auto
 ```
 
 Options:
@@ -36,8 +36,12 @@ Re-running the installer updates the skill files and never touches your
 If you would rather have a git checkout you can edit and push from:
 
 ```bash
-git clone https://github.com/<your-username>/english-coach.git ~/.claude/skills/english-coach
+git clone https://github.com/bitswelder/EnglishCoachSkill.git ~/.claude/skills/english-coach
 ```
+
+Note the target folder is `english-coach`, not `EnglishCoachSkill` — Claude Code matches
+the skill by its folder name, so cloning into a differently named folder stops
+`/english-coach` from being found.
 
 On Windows `cmd.exe`, use `"%USERPROFILE%\.claude\skills\english-coach"` as the target —
 `$HOME` is not expanded there.
