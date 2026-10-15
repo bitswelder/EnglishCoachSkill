@@ -1,7 +1,7 @@
 {
   "name": "claude-english-coach",
   "version": "1.0.0",
-  "description": "A Claude Code skill that corrects non-native English and teaches the rule behind each fix",
+  "description": "A skill for Claude Code and Codex that corrects non-native English and teaches the rule behind each fix",
   "bin": {
     "claude-english-coach": "install.js"
   },
@@ -14,6 +14,8 @@
   "keywords": [
     "claude",
     "claude-code",
+    "codex",
+    "agent-skill",
     "skill",
     "english",
     "grammar",

@@ -89,7 +89,8 @@ land oddly). Offer the sendable version last, ready to copy.
 
 Keep a running log so patterns become visible.
 
-- Log file: `~/.claude/skills/english-coach/mistakes-log.md`
+- Log file: `mistakes-log.md`, in this skill's own directory (next to `SKILL.md`).
+  Resolve it relative to this file — do not assume a `~/.claude` or `~/.codex` path.
 - After a correction, append one line per **error type** (not per error):
   `- YYYY-MM-DD | <error type> | <their version> → <correct version>`
 - Create the file if it does not exist, with a `# Recurring mistakes` heading.
